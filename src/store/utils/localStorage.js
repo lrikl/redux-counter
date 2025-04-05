@@ -7,9 +7,9 @@ export const loadState = () => {
       return undefined; // Повертаємо undefined, щоб Redux використовував початковийдержаву зі слайсу
     }
     const parsedState = JSON.parse(serializedState);
-    return { // Важливо: повертаємо об'єкт, структура якого відповідає попередньомудержаві
+    return { // Важливо: повертаємо об'єкт, структура якого відповідає попередньому
         counterSimple: {value: parsedState.simpleCount},
-        counterEmojis: {counts: parsedState.emojisCount,
+        counterEmojis: {counts: parsedState.emojisCount, // відновлюємо потрібну частину структури даних counterEmojis
             flyingEmojis: [],               
             showResults: false  
         }
@@ -21,8 +21,7 @@ export const loadState = () => {
   }
 };
 
-
-export const saveState = (state) => { // Приймає весь стан Redux, але зберігаємо лише потрібну частину
+export const saveState = (state) => { // Приймає весь стан Redux, зберігаємо лише значення лічильників
   try {
     const stateToSave = { 
         simpleCount: state.counterSimple.value,
