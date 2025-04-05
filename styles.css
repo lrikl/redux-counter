@@ -145,11 +145,13 @@ button {
 }
 
 @media (max-width: 767px) {
+
     .emoji-item {
-        display: flex;
-        flex-direction: column;
         text-align: center;
-        gap: 8px;
+    }
+    
+    .emoji {
+        font-size: 32px;
     }
 
     .btn {
