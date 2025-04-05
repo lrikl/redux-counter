@@ -1,4 +1,4 @@
-const COUNTER_STATE_KEY = 'counterState';
+const COUNTER_STATE_KEY = 'REDUX_COUNTER_DATA';
 
 export const loadState = () => {
   try {
