@@ -4,7 +4,7 @@ export const loadState = () => {
   try {
     const serializedState = localStorage.getItem(COUNTER_STATE_KEY);
     if (serializedState === null) {
-      return undefined; // Повертаємо undefined, щоб Redux використовував початковийдержаву зі слайсу
+      return undefined; // Повертаємо undefined, щоб Redux використовував початковий стан зі слайсу
     }
     const parsedState = JSON.parse(serializedState);
     return { // Важливо: повертаємо об'єкт, структура якого відповідає попередньому

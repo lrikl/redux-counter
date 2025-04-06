@@ -5,7 +5,6 @@ import { loadState } from './utils/localStorage.js';
 import localStorageMiddleware from './middleware/localStorageMiddleware.js';
 
 const preloadedState = loadState(); // завантажуємо початковий стан перед створенням store, щоб бралося значення з Local Storage
-console.log("preloadedState", preloadedState)
 
 export const store = configureStore({
   reducer: {
